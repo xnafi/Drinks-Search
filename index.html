@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Your Drink</title>
+    <!-- daisy ui -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-[#29465B] py-10 h-screen w-screen">
+    <header class="flex flex-col justify-center items-center mx-auto">
+      <h1 class="text-4xl text-white font-bold my-6">Search Your Drink</h1>
+      <div class="">
+        <label class="label">
+          <span class="label-text text-white">Search Here</span>
+        </label>
+        <label class="input-group">
+          <input
+            title="vodka"
+            id="search-field"
+            type="text"
+            placeholder="Type..."
+            class="input input-bordered"
+          />
+          <span id="search" class="btn btn-outline btn-success">SEARCH</span>
+        </label>
+      </div>
+    </header>
+    <main class="bg-[#29465B]">
+      <section
+        class="flex flex-col justify-center items-center  container mx-auto bg-[#29465B]"
+      >
+        <div
+          id="parent-div"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 my-10"
+        ></div>
+      </section>
+
+      <!-- ************ -->
+
+      <section id="parent-div-1">
+        <input type="checkbox" id="my-modal-4" class="modal-toggle" />
+        <label for="my-modal-4" class="modal cursor-pointer">
+          <label class="modal-box relative" for="">
+            <h3 class="text-2xl font-bold" id="drinks-name"></h3>
+            <h3 class="text-md font-bold" id="drinks-ing"></h3>
+            <h3 class="text-md font-bold" id="drinks-type"></h3>
+            <p id="details" class="py-4"></p>
+          </label>
+        </label>
+      </section>
+    </main>
+    <script src="js/app.js"></script>
+  </body>
+</html>
